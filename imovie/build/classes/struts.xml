@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<!-- 指定struts配置文件修改后是否自动重新加载文件 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<constant name="struts.action.extension" value="do"></constant> 
+	<package name="main" namespace="/" extends="struts-default">
+		
+		<action name="user*Action" class="userAction" method="{1}">
+			<result name="member_index">/jsp/member/member_index.jsp</result>
+			<result name="worker_index">/jsp/worker/worker_index.jsp</result>
+			<result name="manager_index">/jsp/manager/manager_index.jsp</result>
+			<result name="member_rechargeComplete">/jsp/member/member_rechargeComplete.jsp</result>
+			<result name="member_myInformation">/jsp/member/member_myInformation.jsp</result>
+			<result name="worker_userInformation">/jsp/worker/worker_userInformation.jsp</result>
+			<result name="worker_search">/jsp/worker/worker_search.jsp</result>
+			<result name="worker_rechargeRecord">/jsp/worker/worker_rechargeRecord.jsp</result>
+			<result name="member_rechargeRecord">/jsp/member/member_rechargeRecord.jsp</result>
+			<result name="member_credit">/jsp/member/member_credit.jsp</result>
+			<result name="signup">/jsp/signup.jsp</result>
+			<result name="login">/jsp/login.jsp</result>
+			<result name="success">/jsp/success.jsp</result>
+			<result name="failure">/jsp/failure.jsp</result>
+			<result name="{1}">/jsp/{1}.jsp</result>
+		</action>
+		
+		<action name="movie*Action" class="movieAction" method="{1}">
+			<result name="worker_plan">/jsp/worker/worker_plan.jsp</result>
+			<result name="worker_makePlan">/jsp/worker/worker_makePlan.jsp</result>
+			<result name="worker_editPlan">/jsp/worker/worker_editPlan.jsp</result>
+			<result name="worker_sale">/jsp/worker/worker_sale.jsp</result>
+			<result name="manager_reviewPlan">/jsp/manager/manager_reviewPlan.jsp</result>
+			<result name="member_buy">/jsp/member/member_buy.jsp</result>
+			<result name="member_choose">/jsp/member/member_choose.jsp</result>
+			<result name="worker_choose">/jsp/worker/worker_choose.jsp</result>
+			<result name="member_orderConfirm">/jsp/member/member_orderConfirm.jsp</result>
+			<result name="worker_orderConfirm">/jsp/worker/worker_orderConfirm.jsp</result>
+			<result name="failure">/jsp/failure.jsp</result>
+		</action>
+		
+		<action name="order*Action" class="orderAction" method="{1}">
+			<result name="member_activityWatched">/jsp/member/member_activityWatched.jsp</result>
+			<result name="member_activityAnswered">/jsp/member/member_activityAnswered.jsp</result>
+			<result name="member_buy">/jsp/member/member_buy.jsp</result>
+			<result name="member_choose">/jsp/member/member_choose.jsp</result>
+			<result name="member_comsumptionRecord">/jsp/member/member_consumptionRecord.jsp</result>
+			<result name="member_orderComplete">/jsp/member/member_orderComplete.jsp</result>
+			<result name="member_orderConfirm">/jsp/member/member_orderConfirm.jsp</result>
+			<result name="worker_orderComplete">/jsp/worker/worker_orderComplete.jsp</result>
+			<result name="member_quiz">/jsp/member/member_quiz.jsp</result>
+			<result name="worker_quiz">/jsp/worker/worker_quiz.jsp</result>
+			<result name="worker_makeQuiz">/jsp/worker/worker_makeQuiz.jsp</result>
+			<result name="member_myQuiz">/jsp/member/member_myQuiz.jsp</result>
+			<result name="worker_orderRecord">/jsp/worker/worker_orderRecord.jsp</result>
+			<result name="worker_validActivity">/jsp/worker/worker_validActivity.jsp</result>
+			<result name="member_orderRecord">/jsp/member/member_consumptionRecord.jsp</result>
+			<result name="failure">/jsp/failure.jsp</result>
+		</action>
+		
+		<action name="manager*Action" class="managerAction" method="{1}">
+			<result name="manager_allMovie">/jsp/manager/manager_allMovie.jsp</result>
+			<result name="manager_allValidMovie">/jsp/manager/manager_allValidMovie.jsp</result>
+			<result name="manager_ageStatic">/jsp/manager/manager_ageStatic.jsp</result>
+			<result name="manager_genderStatic">/jsp/manager/manager_genderStatic.jsp</result>
+			<result name="manager_residenceStatic">/jsp/manager/manager_residenceStatic.jsp</result>
+			<result name="manager_consumptionStatic">/jsp/manager/manager_consumptionStatic.jsp</result>
+			<result name="manager_rechargeStatic">/jsp/manager/manager_rechargeStatic.jsp</result>
+			<result name="manager_userStateStatic">/jsp/manager/manager_userStateStatic.jsp</result>
+			<result name="manager_activityStatic">/jsp/manager/manager_activityStatic.jsp</result>
+			<result name="manager_cardStatic">/jsp/manager/manager_cardStatic.jsp</result>
+			<result name="manager_dayCountStatic">/jsp/manager/manager_dayCountStatic.jsp</result>
+			<result name="manager_monthCountStatic">/jsp/manager/manager_monthCountStatic.jsp</result>
+			<result name="manager_videoHallStatic">/jsp/manager/manager_videoHallStatic.jsp</result>
+			<result name="manager_movieStatic">/jsp/manager/manager_movieStatic.jsp</result>
+			<result name="manager_purchaseStatic">/jsp/manager/manager_purchaseStatic.jsp</result>
+			<result name="failure">/jsp/failure.jsp</result>
+		</action>
+		
+	</package>
+	
+	<!-- 用作AJAX的action配置 -->
+	<package name="json" namespace="/json" extends="json-default">
+		<action name="ajax*Action" class="ajaxAction" method="{1}">
+			<result type="json" name="{1}">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+	</package>
+</struts>

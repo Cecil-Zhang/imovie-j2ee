@@ -1,0 +1,97 @@
+.poster{
+	height: 578px;
+	width: 1320px;
+}
+
+.role{
+	padding-left:20px;
+	color: #1abc9c;
+}
+
+.haspadding{
+	padding-top:20px;
+}
+
+.personelrow{
+	margin-top:30px;
+}
+
+.text{
+	font-family:Georgia,微软雅黑;
+	font-size:50px;
+}
+
+.heading{
+	padding-top:25px;
+}
+
+.rightMargin{
+	margin-right:20px;
+}
+
+.button{
+	width:100px;
+	margin-left:40px;
+}
+
+.mythumbnail{
+	height:50px;
+}
+
+.paddingForNav{
+	padding-top:100px;
+}
+
+.mycarousel{
+	height: 510px;	
+}
+
+.center{
+	text-align:center;
+}
+
+.inputLabel{
+	font-family:Georgia,微软雅黑;
+	font-size:large;
+}
+
+.genderButton{
+	margin-left:80px;
+}
+
+.seatButton{
+	margin-left:40px;
+	margin-top:10px;
+}
+
+.paddingRight{
+	padding-right:20px;
+}
+
+.mydescription{
+	font-family:Georgia,微软雅黑,黑体;
+	font-weight:bold;
+	font-size:15px;
+	margin-top:-10px;
+}
+
+.orderPost{
+	margin-top:100px;
+}
+
+.disableInput{
+	color:#34495e !important;
+}
+
+
+#bankDiv{
+	padding-left:20px;
+}
+
+#login-name{
+	color:#660000;
+}
+
+#login-pass{
+	color:#660000;
+}
